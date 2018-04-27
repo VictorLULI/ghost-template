@@ -1,0 +1,107 @@
+{{!< default}}
+
+{{!-- The tag above means: insert everything in this file
+into the {body} of the default.hbs template --}}
+
+
+{{!-- Everything inside the #post tags pulls data from the post --}}
+{{#post}}
+<section class="pageheader"> 
+  <div class="container">
+    <div class="row"> 
+      <div class="col-md-12">
+        <div class="title-holder">
+          <div class="title-holder-cell text-left">
+            <h1 class="page-title">
+            {{#if featured}}
+                <span>成功案例</span>
+            {{else}}
+                <span>新闻动态</span>
+            {{/if}}                
+            </h1>
+            <ol class="breadcrumb">
+              <li><a href="/">首页</a></li>              
+              <i class="fa fa-chevron-right" aria-hidden="true" style="font-size: 5px;padding: 4px 10px;"></i>
+            {{#if featured}}
+                <li class="active">成功案例</li>
+            {{else}}
+                <li class="active">新闻动态</li>
+            {{/if}}                 
+              <i class="fa fa-chevron-right" aria-hidden="true" style="font-size: 5px;padding: 4px 10px;"></i>
+              <li class="active">{{title}}</li>
+            </ol>     
+          </div>
+        </div> 
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <div class="row">
+      <!-- Post Content Column -->
+      <div class="col-lg-8">
+        <h2 class="text-center">{{title}}</h2>
+        <div class="post-meta text-center">
+          <span class="post-date">{{date format="D MMMM YYYY"}}</span>
+        </div>
+        <!-- Preview Image -->
+          {{#if feature_image}}
+              <img class="img-responsive" style="width:100%" src="{{img_url feature_image}}">
+          {{else}}
+              <img class="img-responsive" style="width:100%" src="http://placehold.it/900x300">
+          {{/if}}
+        <!-- Post Content -->
+          {{content}}
+       </div>   
+      <!-- Sidebar Widgets Column -->
+      <div class="col-md-4">
+        <div class="widget widget_recent_entries">
+          <h3 class="widget-title"><span>相关文章</span></h3>
+          <ul>
+            {{#if primary_tag}}
+            {{#get "posts" filter="tags:{{primary_tag.slug}}+id:-{{id}}" limit="3" as |related_posts|}}
+            {{#foreach related_posts}}      
+                <li class="related"><a href="{{url}}">{{title}}</a></li>
+            {{/foreach}}
+            {{/get}}
+            {{/if}}                
+          </ul>
+        </div>          
+        <div class="widget st-blog-wgt mt-4">
+          <h3 class="widget-title"><span>最新文章</span></h3>
+          <ul class="media-list mt-4">
+            {{#get "posts" filter="id:-{{id}}" limit="3" as |recents|}}
+            {{#foreach recents}}              
+            <li class="media">
+              <div class="pull-left">
+                <a href="{{url}}" title="{{title}}">
+                  <img width="150" height="150" src="{{img_url feature_image}}" alt="{{title}}" sizes="(max-width: 150px) 100vw, 150px">
+                </a>
+              </div>
+              <div class="media-body">
+                <a href="{{url}}" title="{{title}}">{{title}}</a>
+                <span>{{date format="D MMMM YYYY"}}</span>
+              </div>
+            </li>
+            {{/foreach}}
+            {{/get}}              
+          </ul>
+        </div>
+        <div id="tag_cloud-2" class="widget widget_tag_cloud">
+          <h3 class="widget-title mt-4"><span>标签</span></h3>
+          <div class="tagcloud">
+            {{#if tags}}
+            {{#foreach tags}}
+                <a href="{{url}}" class="tag-link-90 tag-link-position-1" title="{{name}}" style="font-size: 18pt;">{{name}}</a>
+            {{/foreach}}
+            {{/if}}
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.row -->
+  </div>
+</section>
+
+{{/post}}

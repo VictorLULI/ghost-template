@@ -1,0 +1,20 @@
+{{#get "posts" filter="featured:false" limit="3" as |recents|}}
+{{#foreach recents}}
+  <article class="col-lg-4 col-sm-12 portfolio-item">
+      <div class="card h-100">
+          {{#if feature_image}}
+              <a href="{{url}}">
+                  <img class="card-img-top" style="height:200px" src="{{img_url feature_image}}" alt="{{title}}">
+                  <div class="zoom-overlay"></div>
+              </a>
+          {{/if}}    
+        <div class="card-body">
+          <h4 class="card-title">
+            <a href="{{url}}">{{title}}</a>
+          </h4>
+          <p class="card-text">{{excerpt words="60"}}</p>
+        </div>
+      </div>
+  </article>
+{{/foreach}}
+{{/get}}

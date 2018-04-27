@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    {{!-- Document Settings --}}
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="author" content="LI LU">    
+
+    {{!-- Base Meta --}}
+    <title>{{meta_title}}</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="徐州防雷设施检测有限公司重庆分公司,防雷检测,防雷工程,防雷公司,防雷产品,避雷工程,防雷设计,防雷施工,重庆防雷,重庆防雷工程,优+防雷,ufanglei,fanglei,"/>
+
+    {{!-- Styles'n'Scripts --}}
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom fonts for this template -->
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" type="text/css" href="{{asset "built/creative.min.css"}}"/>
+
+
+    {{!-- This tag outputs SEO meta+structured data and other important settings --}}
+    {{ghost_head}}
+
+</head>
+<body class="{{body_class}}" id="page-top">
+
+
+
+        {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
+        {{{body}}}
+
+        {{!-- The footer at the very bottom of the screen --}}
+        <footer id="footer">
+          <div id="footer-wrapper">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-3 col-sm-6 col-xs-12 md-3">
+                  <div class="footer-container">
+                    <div id="text-3" class="widget widget_text">
+                      <h3 class="widget-title"><span>关于我们</span></h3>
+                      <div class="textwidget" style="padding-bottom:  5px;">
+                        <p><img alt="construction architect" src="http://cdn.ufanglei.com/img/logo-transparent.png">&nbsp;&nbsp;徐州防雷设施检测有限公司</p>
+                        <p style="font-size: 14px;">主要从事防雷装置、防静电装置、电磁辐射、电磁脉冲的检测，技术咨询及相关服务，是最早一家成立并取得防雷检测资质的民营企业</p>
+                      </div>
+                    </div>
+                    <div id="st-social-wgt-3" class="widget st-social-wgt" style="padding-bottom: 50px;">
+                      <div class="st-social">
+                        <ul class="list-footinline">
+                          <li><a class="fa fa-qq" href="#" title="Twitter" target="_blank"></a></li>
+                          <li><a class="fa fa-wechat" href="#" title="LinkedIn" target="_blank"></a></li>
+                          <li><a class="fa fa-weibo" href="#" title="Instagram" target="_blank"></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12 mb-3">
+                  <div class="footer-container">
+                    <div id="nav_menu-2" class="widget widget_nav_menu">
+                      <h3 class="widget-title"><span>站内导航</span></h3>
+                      <div class="menu-widget-menu-container">
+                        <ul class="menu" style="font-size: 14px;">
+                          <li><a href="/news/">新闻动态</a></li>
+                          <li><a href="/contact/">联系我们</a></li>   
+                          <li><a href="/legal/">法律声明</a></li>  
+                          <li><a href="/privacy-policy/">隐私保护</a></li>                                         
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12 mb-3">
+                  <div class="footer-container">
+                    <div id="st-services-wgt-3" class="widget st-services-wgt">
+                      <h3 class="widget-title"><span>友情联系</span></h3>
+                      <ul style="font-size: 14px;">
+                        <li><a href="http://www.baidu.com">百度</a></li>
+                        <li><a href="http://www.google.com">Google</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12 mb-3">
+                  <div class="footer-container">
+                    <div id="text-5" class="widget widget_text">
+                      <h3 class="widget-title"><span>公司地址</span></h3>
+                    </div>
+                    <div id="st-contact-wgt-4" class="widget st-contact-wgt">
+                      <ul style="font-size: 14px;">
+                        <li><i class="fa fa-map-marker"></i> 重庆市九龙坡区华美路21号4幢31-2号</li>
+                        <li><i class="fa fa-phone"></i> (023) 8636-0883</li>
+                        <li><i class="fa fa-print"></i> (023) 8636-0888</li>
+                        <li><i class="fa fa-envelope-o"></i><a href="mailto:services@ufanglei.com">services@ufanglei.com</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>        
+              </div>
+            </div>
+          </div>
+          <div id="copyright-wrapper">  
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12 text-center">
+                <div>{{@blog.title}} &copy; {{date format="YYYY"}} 渝ICP备18002979号</div>
+                </div>          
+              </div>
+            </div>
+          </div>  
+        </footer>
+        <div class="scrollTop"><a href="#"><i class="fa fa-chevron-up"></i></a></div>     
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.bootcss.com/wow/1.1.2/wow.min.js"></script>
+    <script src="{{asset "js/demo.js"}}"></script> 
+
+    {{!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. --}}
+    {{{block "scripts"}}}
+
+    {{!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag --}}
+    {{ghost_foot}}
+    <script>
+        /*Back to Top*/
+      $(window).on('scroll', function () {
+          if ($(this).scrollTop() > 200) {
+              $('.scrollTop').fadeIn();
+          } else {
+              $('.scrollTop').fadeOut();
+          }
+      });
+
+      $('.scrollTop').click(function (e) {
+          e.stopPropagation();
+          $('body,html').animate({
+              scrollTop: 0
+          }, 800);
+          return false;
+      });          
+    </script>
+    <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?44045e8a3c90b52051c6ca93acb3561d";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+    <script>
+    (function(){
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        }
+        else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+    </script>    
+</body>
+</html>
